@@ -1,20 +1,32 @@
-from django.db import models
-from django.contrib.auth.models import User
-from posts.models import Post
+from rest_framework import serializers
+from .models import Comment
 
 
-class Comment(models.Model):
+class CommentSerializer(serializers.ModelSerializer):
     """
-    Comment model, related to User and Post
+    Serializer for the Comment model
+    Adds three extra fields when returning a list of Comment instances
     """
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    content = models.TextField()
+    owner = serializers.ReadOnlyField(source='owner.username')
+    is_owner = serializers.SerializerMethodField()
+    profile_id = serializers.ReadOnlyField(source='owner.profile.id')
+    profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
+
+    def get_is_owner(self, obj):
+        request = self.context['request']
+        return request.user == obj.owner
 
     class Meta:
-        ordering = ['-created_at']
+        model = Comment
+        fields = [
+            'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
+            'post', 'created_at', 'updated_at', 'content'
+        ]
 
-    def __str__(self):
-        return self.content
+
+class CommentDetailSerializer(CommentSerializer):
+    """
+    Serializer for the Comment model used in Detail view
+    Post is a read only field so that we dont have to set it on each update
+    """
+    post = serializers.ReadOnlyField(source='post.id')
