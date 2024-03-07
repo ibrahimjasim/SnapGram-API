@@ -1,6 +1,6 @@
 from django.db import IntegrityError
 from rest_framework import serializers
-from .models import Saved  # Changed from Bookmark to Saved
+from .models import Saved 
 
 class SavedSerializer(serializers.ModelSerializer):
     """
