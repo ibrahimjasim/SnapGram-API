@@ -60,7 +60,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-ibrahimjasi-snapgramapi-5x9t7atcz5z.ws-eu108.gitpod.io', 'snapgram-api.herokuapp.com']
+ALLOWED_HOSTS = ['8000-ibrahimjasi-snapgramapi-5x9t7atcz5z.ws-eu108.gitpod.io', 'snapgram-api-df7c5b682dbd.herokuapp.com']
 
 
 # Application definition
