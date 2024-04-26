@@ -4,8 +4,7 @@ from posts.models import Post
 
 class Saved(models.Model):
     """
-    Saved model, related to 'owner' and 'post'.
-    'unique_together' makes sure a user can't save the same post twice.
+    Saved model, related to 'owner' and 'post'
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
