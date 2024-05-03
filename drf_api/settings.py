@@ -61,7 +61,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-ibrahimjasi-snapgramapi-k9ex4eedgh5.ws-eu112.gitpod.io', os.environ.get('ALLOWED_HOST')]
+ALLOWED_HOSTS = ['8000-ibrahimjasi-snapgramapi-k9ex4eedgh5.ws-eu110.gitpod.io', os.environ.get('ALLOWED_HOST')]
 
 
 # Application definition
@@ -94,6 +94,7 @@ INSTALLED_APPS = [
     'followers',
     'saved',
     'events',
+    'contacts',
 ]
 SITE_ID = 1
 MIDDLEWARE = [

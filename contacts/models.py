@@ -9,6 +9,7 @@ class Contact(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20, blank=True)
     address = models.TextField(blank=True)
+    message = models.TextField(blank=True)
 
     class Meta:
         ordering = ['-created_at']
