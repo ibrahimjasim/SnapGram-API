@@ -10,8 +10,7 @@ class Contact(models.Model):
     phone = models.CharField(max_length=20, blank=True)
     address = models.TextField(blank=True)
     message = models.TextField(blank=True)
-    admission_price = models.TextField( blank=True)  
-    website = models.URLField(blank=True)  
+ 
 
 
     class Meta:

@@ -12,6 +12,8 @@ class Event(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='organized_events')
+    admission_price = models.TextField( blank=True)  
+    website = models.URLField(blank=True)  
 
     def __str__(self):
         return f"{self.title} by {self.organizer.username}"

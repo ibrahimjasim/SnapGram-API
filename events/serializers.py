@@ -7,7 +7,7 @@ class EventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Event
-        fields = ['id', 'title', 'description', 'location', 'start_time', 'end_time', 'organizer', 'organizer_username', 'created_at', 'updated_at']
+        fields = ['id', 'title', 'description', 'location', 'start_time', 'end_time', 'organizer', 'organizer_username', 'created_at', 'updated_at',"website","admission_price"]
         read_only_fields = ['organizer', 'created_at', 'updated_at']  # These fields should not be editable by the API
 
     def validate_start_time(self, value):
