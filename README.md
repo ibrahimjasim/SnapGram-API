@@ -1,5 +1,12 @@
 # The Snapgram-API
 Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform crafted to empower users to share the meaningful moments of their lives.
+## Table of Contents 
+- [User Stories](#user-stories)
+- [Testing](#testing)
+- [Database Schema](#database-schema)
+- [Technologies Used](#technologies-used)
+- [Deployment](#deployment)
+- [Credits](#credits)
 ### User stories
 *  Backednd User storys can be found [Here](https://github.com/users/ibrahimjasim/projects/17)
 
@@ -22,7 +29,7 @@ Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform
 | Events    |Create, view, edit, and delete events as a user                   |Organize, explore, modify, or remove upcoming events          | Create, List/Filter, Update, Destroy event               |
 | Contacts  | Submit support requests and send feedback as a user            |     Resolve issues and improve platform experience    |Create a Cntact message    |
 
-## Testing 
+## Testing:
 ### Validator Testing
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
@@ -64,7 +71,7 @@ Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform
 
 
 
-### Manual Testing: 
+### Manual Testing
 | Model      | Endpoint            | Create | Retrieve | Update | Delete | Filter        | Text Search   |
 |------------|---------------------|--------|----------|--------|--------|---------------|---------------|
 | Users      | users/              | Yes    | Yes      | Yes    | No     | No            | No            |
@@ -86,7 +93,7 @@ Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform
 
 
 
-## Database schema.
+## Database schema
 ![Api Diagram - SqlDBM - Google Chrome 2023-12-13 13_29_45](https://github.com/ibrahimjasim/API-Project/assets/127301769/9768d5d5-de79-4ee0-abf3-53a9a06ada0a)
 
 ## Unfixed Bugs
