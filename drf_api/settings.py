@@ -7,17 +7,17 @@ import dj_database_url
 if os.path.exists('env.py'):
     import env
 
-# Cloudinary settings for storing media files
+
 CLOUDINARY_STORAGE = {
     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
 }
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# Define the base directory for the project
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# REST framework configuration
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication'
@@ -39,12 +39,12 @@ JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
-# Serializers configuration
+
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
 }
 
-# Security settings
+
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
@@ -52,7 +52,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST')
 ]
 
-# Application definition
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -98,16 +98,16 @@ if 'CLIENT_ORIGIN' in os.environ:
         os.environ.get('CLIENT_ORIGIN')
     ]
 if 'CLIENT_ORIGIN_DEV' in os.environ:
-    extracted_url = re.match(r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV'), re.IGNORECASE).group(0)
+    extracted_url = (re.match(r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV'), re.IGNORECASE).group(0))
     CORS_ALLOWED_ORIGIN_REGEXES = [
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
     ]
 CORS_ALLOW_CREDENTIALS = True
 
-# URL configuration
+
 ROOT_URLCONF = 'drf_api.urls'
 
-# Template settings
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -124,10 +124,10 @@ TEMPLATES = [
     },
 ]
 
-# WSGI application path
+
 WSGI_APPLICATION = 'drf_api.wsgi.application'
 
-# Database configuration
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     if 'DEV' not in os.environ else {
@@ -136,7 +136,7 @@ DATABASES = {
     }
 }
 
-# Password validation configuration
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -162,8 +162,8 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# Static files settings
+
 STATIC_URL = '/static/'
 
-# Default primary key field type
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

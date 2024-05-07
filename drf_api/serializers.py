@@ -3,6 +3,10 @@ from rest_framework import serializers
 
 
 class CurrentUserSerializer(UserDetailsSerializer):
+    """
+    Generate user information for Navbar.
+    Display when user logged in.
+    """
     profile_id = serializers.ReadOnlyField(source='profile.id')
     profile_image = serializers.ReadOnlyField(source='profile.image.url')
 
