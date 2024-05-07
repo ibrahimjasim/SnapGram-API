@@ -301,3 +301,5 @@ pip3 freeze --local > requirements.txt
 
 ### Content:
 - The creation of this API database was provided through the step by step guide of the C.I. DRF-API walkthrough project.
+- [CluelessBiker](https://github.com/CluelessBiker), My mentor for the steps of Deployment
+
