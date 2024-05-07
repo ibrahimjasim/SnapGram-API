@@ -1,5 +1,10 @@
-## User stories
+# The Snapgram-API
 Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform crafted to empower users to share the meaningful moments of their lives.
+### User stories
+*  Backednd User storys can be found [Here](https://github.com/users/ibrahimjasim/projects/17)
+
+* Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform crafted to empower users to share the meaningful moments of their lives.
+  
 | Category  | User Action                               | Purpose                                      | API Feature                 |
 |-----------|-------------------------------------------|----------------------------------------------|-----------------------------|
 | Auth      | Register for an account                   | Gain access to personalizing, sharing, and interacting on the platform        | dj-rest-auth                |
@@ -17,7 +22,49 @@ Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform
 | Events    |Create, view, edit, and delete events as a user                   |Organize, explore, modify, or remove upcoming events          | Create, List/Filter, Update, Destroy event               |
 | Contacts  | Submit support requests and send feedback as a user            |     Resolve issues and improve platform experience    |Create a Cntact message    |
 
-## Manual Testing: 
+## Testing 
+### Validator Testing
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** |
+| ----------------------------- | ----------------------- | --------------------------- | ---------- |
+| drf_API settings.py | PEP8 validator |No issues found| ✅ |
+| drf_API urls.py | PEP8 validator |No issues found| ✅ |
+| drf_API views.py | PEP8 validator |No issues found| ✅ |
+| drf_API serializers.py | PEP8 validator |No issues found| ✅ |
+| Events serializers.py | PEP8 validator |No issues found| ✅ |
+| Events models.py | PEP8 validator |No issues found| ✅ |
+| Events urls.py | PEP8 validator |No issues found| ✅ |
+| Events views.py | PEP8 validator |No issues found| ✅ |
+| Posts serializers.py | PEP8 validator |No issues found| ✅ |
+| Posts models.py | PEP8 validator |No issues found| ✅ |
+| Posts urls.py | PEP8 validator |No issues found| ✅ |
+| Posts views.py | PEP8 validator |No issues found| ✅ |
+| Likes serializers.py | PEP8 validator |No issues found| ✅ |
+| Likes models.py | PEP8 validator |No issues found| ✅ |
+| Likes urls.py | PEP8 validator |No issues found| ✅ |
+| Likes views.py | PEP8 validator |No issues found| ✅ |
+| Followers serializers.py | PEP8 validator |No issues found| ✅ |
+| Followers models.py | PEP8 validator |No issues found| ✅ |
+| Followers urls.py | PEP8 validator |No issues found| ✅ |
+| Followers views.py | PEP8 validator |No issues found| ✅ |
+| Profiles serializers.py | PEP8 validator |No issues found| ✅ |
+| Profiles models.py | PEP8 validator |No issues found| ✅ |
+| Profiles urls.py | PEP8 validator |No issues found| ✅ |
+| Profiles views.py | PEP8 validator |No issues found| ✅ |
+| Comments serializers.py | PEP8 validator |No issues found| ✅ |
+| Comments models.py | PEP8 validator |No issues found| ✅ |
+| Comments urls.py | PEP8 validator |No issues found| ✅ |
+| Comments views.py | PEP8 validator |No issues found| ✅ |
+| Contacts serializers.py | PEP8 validator |No issues found| ✅ |
+| Contacts models.py | PEP8 validator |No issues found| ✅ |
+| Contacts views.py | PEP8 validator |No issues found| ✅ |
+| Contacts urls.py | PEP8 validator |No issues found| ✅ |
+
+
+
+
+
+
+### Manual Testing: 
 | Model      | Endpoint            | Create | Retrieve | Update | Delete | Filter        | Text Search   |
 |------------|---------------------|--------|----------|--------|--------|---------------|---------------|
 | Users      | users/              | Yes    | Yes      | Yes    | No     | No            | No            |
