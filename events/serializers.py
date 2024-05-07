@@ -42,5 +42,8 @@ class EventSerializer(serializers.ModelSerializer):
         instance.location = validated_data.get('location', instance.location)
         instance.start_time = validated_data.get('start_time', instance.start_time)
         instance.end_time = validated_data.get('end_time', instance.end_time)
+        instance.website = validated_data.get('website', instance.website)
+        instance.admission_price = validated_data.get('admission_price', instance.admission_price)
+
         instance.save()
         return instance
