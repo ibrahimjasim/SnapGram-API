@@ -114,10 +114,10 @@ Welcome to Snapgram, your go-to social media app! Fotogram is a dynamic platform
 
 ## Deployment:
 ### Project creation:
-1. Create the GitHub repository.
-2. Create the project app on [Heroku.](https://dashboard.heroku.com/apps/snapgram-api/deploy/github).
-3. Add the Postgres package to the Heroku app via the Resources tab.
-4. Once the GitHub repository was launched on GitPod, installed the following packages using the `pip install` command:
+1. Establish the GitHub repository.
+2.  Set up the project application on Heroku.
+3. Include the Postgres package in the Heroku app through the Resources tab.
+4. After initializing the GitHub repository in GitPod, use the pip install command to install the
 ```
 'django<4'
 dj3-cloudinary-storage
@@ -293,8 +293,8 @@ python3 manage.py migrate
 ```
 pip3 freeze --local > requirements.txt
 ```
-24. Added, committed & pushed the changes to GitHub
-25. Navigated back to heroku, and under the ‘Deploy’ tab, connect the GitHub repository.
+24. Added, committed, and pushed the changes to GitHub.
+25. Returned to Heroku, accessed the 'Deploy' tab, and connected the GitHub repository.
 26. Deployed the branch.
 
  ## CREDITS:
